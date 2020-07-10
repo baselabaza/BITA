@@ -72,10 +72,10 @@ sudo rm -fr ../.telegram-cli
 done
 else
 
-if ! screen -list | grep -q "BITA"; then
-screen -S BITA ./run R
+if ! screen -list | grep -q "bita"; then
+screen -S bita ./run R
 fi
-screen -S BITA -X kill
-screen -S BITA ./run R
+screen -S bita -X kill
+screen -S bita ./run R
 fi
 
