@@ -1916,8 +1916,8 @@ end
 if (MsgText[1]== "ايدي" or MsgText[1]=="ايديي🆔") and msg.type == "pv" then return  "\n• اهلاً عزيزي المطور ايديك :\n\n• "..msg.sender_user_id_.."\n"  end
 
 if MsgText[1]== "قناة السورس" and msg.type == "pv" then
-local inline = {{{text="-قنآهہ‏‏ آلسـورس اضـغـط هـنـآ ",url="https://t.me/abazaa"}}}
-send_key(msg.sender_user_id_,'   [قناة سورس : بيتٲ](https://t.me/abazaa)' ,nil,inline,msg.id_)
+local inline = {{{text="-قنآهہ‏‏ آلسـورس اضـغـط هـنـآ ",url="https://t.me/baselabaza"}}}
+send_key(msg.sender_user_id_,'   [قناة سورس : بيتٲ](https://t.me/baselabaza)' ,nil,inline,msg.id_)
 return false
 end
 
@@ -2368,7 +2368,7 @@ return [[
 
 𝗗𝗘𝗩 ➢• [عنتر .](https://t.me/AntarSidgi) 
 
-• [𝐒𝐔𝐑𝐂𝐄 𝐁𝐈𝐓𝐀](https://t.me/abazaa)
+• [𝐒𝐔𝐑𝐂𝐄 𝐁𝐈𝐓𝐀](https://t.me/baselabaza)
 ]]
 end
 
