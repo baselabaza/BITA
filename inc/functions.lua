@@ -1178,7 +1178,7 @@ return sendMsg(msg.chat_id_,msg.id_,'• **عذرا البوت ليس ادمن  
 else
 local lock_service = redis:get(bita..'lock_service')
 if lock_service then 
-sendMsg(msg.chat_id_,msg.id_,'• *تـم تـفـعـيـل الـمـجـمـوعـه .️ \n• *وتم رفع جمـيع المشرفين ادمن .‏‏‏ \n @SourceMartn')
+sendMsg(msg.chat_id_,msg.id_,'• *تـم تـفـعـيـل الـمـجـمـوعـه .️ \n• *وتم رفع جمـيع المشرفين ادمن .‏‏‏ \n @baselabaza')
 else
 sendMsg(msg.chat_id_,msg.id_,'• تـم تـفـعـيـل الـمـجـمـوعـه‏‏ \n')
 end
