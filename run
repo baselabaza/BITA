@@ -1,0 +1,79 @@
+#!/usr/bin/env bash 
+
+
+#                                  @𝑋𝐵_0𝐵
+#   @𝑋𝐵_0𝐵
+#     
+#                @𝑋𝐵_0𝐵
+#                                @𝑋𝐵_0𝐵
+#                                                            @𝑋𝐵_0𝐵
+#---------------------------------------------------------------------
+cd $(cd $(dirname $0); pwd)
+ 
+RED='\033[0;31m'
+SMAY='\033[0;36m' 
+GREEN='\033[0;32m'
+Yellow='\033[0;33m'
+LSAMAY='\033[01;49m'
+WHITB='\033[01;90m'
+WHITEC='\033[01;91m'
+CNIL='\033[0m'
+Version=`lsb_release -rs | cut -f1 -d"."`
+
+if [ "$Version" == "18" ];then
+echo -e "${GREEN}
+
+                    
+       ▇ @𝑋𝐵_0𝐵   ▇                     ▄▇▄▄▄▄▄▇▄                            
+    ▄▇                                           ¦ Dev : @𝑋𝐵_0𝐵
+ ▄▇ ¦ Dev : @𝑋𝐵_0𝐵                    
+                                                               ¦ Source bita BY @𝑋𝐵_0𝐵
+----------------------------------------------------------------------${CNIL}"
+echo -e "${RED}| للاسف لايمكنك تنصيب السورس ع نظام اوبنتو {${Version}} يجب ان يكون على اصدار  اقل مثلا  ${SMAY}14 او 16
+${CNIL}";
+echo -e "${RED}| Sorry Canot install Source on Ubuntu {${Version}} Please install system To Ubuntu ${SMAY}14 or 16 ${RED} For Run The Source bita 
+${CNIL}";
+exit;
+fi
+
+
+if [ ! -f "./TG" ]; then
+echo -e "${RED}
+¦
+¦ CAUTION:${WHITB} Your Not Dwonload TG .
+¦ NOW I Run File ${Yellow}./run${WHITB} To install ${SMAY}Source bita${CNIL} . \n
+\n\n"
+chmod +x ./ins
+./ins
+exit;
+fi
+
+if [ ! -f "./inc/Token.txt" ]; then
+echo -e "${RED}
+¦
+¦ CAUTION:${WHITB} Your Token Bot Not Found .
+¦ NOW I Run File ${SMAY}./RUN.lua${WHITB} To Enter Data For You Bot${CNIL}. \n
+\n\n"
+lua ./inc/Run.lua
+exit;
+fi
+
+
+TOKEN=`cat ./inc/Token.txt`
+sudo chmod +x ./TG
+
+if [ "$1" == "R" ] ; then
+while(true) do
+killall -q ./TG
+sudo rm -fr ../.telegram-cli
+./TG -s inc/Run.lua --bot=$TOKEN
+done
+else
+
+if ! screen -list | grep -q "bita"; then
+screen -S bita ./run R
+fi
+screen -S bita -X kill
+screen -S bita ./run R
+fi
+
