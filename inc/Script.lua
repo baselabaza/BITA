@@ -1206,7 +1206,7 @@ if redis:get(bita.."getidstatus"..msg.chat_id_) == "Photo" then
         }
         ssssys = ali[math.random(#ali)]
         if not redis:get("KLISH:ID") then
-        sendPhoto(msg.chat_id_,msg.id_,data.photos_[0].sizes_[1].photo_.persistent_id_,'₪คⲙε 𖤐  '..Namei..'    \nขᵴε 𖡥  '..UserNameID..' .\nᵴᏖΔ 𖤐  '..msg.TheRank..' .\nᏐꀸ 𖡥  '..msg.sender_user_id_..' .\nⲙᵴꁅ 𖤐  '..msgs..' .\n๔ℌ ๑ ك@baselabaza .\nᵜᵜᵜ',dl_cb,nil)
+        sendPhoto(msg.chat_id_,msg.id_,data.photos_[0].sizes_[1].photo_.persistent_id_,'₪คⲙε 𖤐  '..Namei..'    \nขᵴε 𖡥  '..UserNameID..' .\nᵴᏖΔ 𖤐  '..msg.TheRank..' .\nᏐꀸ 𖡥  '..msg.sender_user_id_..' .\nⲙᵴꁅ 𖤐  '..msgs..' .\n๔ℌ ๑ @baselabaza .\nᵜᵜᵜ',dl_cb,nil)
         else
         Text = redis:get("KLISH:ID")
         Text = Text:gsub('IDGET',msg.sender_user_id_)
@@ -2380,8 +2380,8 @@ end
 if MsgText[1] == "سورس" or MsgText[1]=="السورس" then
 return [[
 𓆩𝗦𝗢𝗨𝗥𝗖𝗘𝗕𝗜𝗧𝗔𓆪
-ᗫєΰєℓ๑קєℜ ➪[ᘋΔᎦḔℓ](t.me/xb_0b)
-ᏨℌΔญḔℓ Ꭶ𖣐ǛℜᏨḔ ➪ [ᵴ๐ᵿᚱ๔εᘋᏐᏖค.](t.me/baselabaza)
+ᗫєΰєℓ๑קєℜ ➪  [ᘋΔᎦḔℓ](t.me/xb_0b)
+ᏨℌΔญḔℓ Ꭶ𖣐ǛℜᏨḔ ➪  [ᵴ๐ᵿᚱ๔εᘋᏐᏖค.](t.me/baselabaza)
  𓌕𓌕𓌕𓌕𓌕𓌕𓌕𓌕𓌕
 ]]
 end
