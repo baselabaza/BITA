@@ -4003,15 +4003,14 @@ elseif Text== "اوامر التسليه"  then return sendMsg(msg.chat_id_,msg.
   GetUserID(msg.sender_user_id_,function(arg,data)
   if data.username_ then USERNAME = '@'..data.username_ else USERNAME = FlterName(data.first_name_..' '..(data.last_name_ or "")) end
   local USERCAR = utf8.len(USERNAME)
-  SendMention(msg.chat_id_,data.id_,msg.id_,"• اضغط على الايدي ليتم النسخ\n\n "..USERNAME.." 
- ( "..data.id_.." )",37,USERCAR)  
+  SendMention(msg.chat_id_,data.id_,msg.id_,"• اضغط على الايدي ليتم النسخ\n\n "..USERNAME.." ~⪼ ( "..data.id_.." )",37,USERCAR)
   return false
   end)
-  elseif Text=="عاوز رابط الحذف" or Text=="هاتو رابط الحذف" or Text=="رابط حذف" or Text=="رابط الحذف" then
+  elseif Text=="ابي رابط الحذف" or Text=="ابي رابط الحذف" or Text=="رابط حذف" or Text=="رابط الحذف" then
   return sendMsg(msg.chat_id_,msg.id_,[[
   • رابط حذف حساب التليجرام
 • [أضغط هُنا](https://telegram.org/deactivate) - .
-‏
+
   ]] )
   --=====================================
   elseif Text== "باسل" or Text== "اباظه" or Text=="باسل اباظه" then
