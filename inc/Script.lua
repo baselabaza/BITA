@@ -2961,7 +2961,7 @@ local hasnid= [[
 *• رتبتي • * `RTBGET`
 *• المعرف • * `USERGET`
 *• رسائلك • * `MSGGET`
-*•سحكاتك • * `edited`
+*• تعديلاتك • * `edited`
 *• تفاعلك • * `TFGET`
 *• جهاتك • * `adduser`
 *•مجوهراتك • * `User_Points`
