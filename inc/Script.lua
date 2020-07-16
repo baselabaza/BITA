@@ -343,7 +343,7 @@ end
 
 if MsgText[1] == "تاك" then
 if not msg.Admin then return "• ** هذا الامر يخص {الادمن,المدير,المنشئ,المطور} فقط  \n" end
-tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-200',''), offset_ = 0,limit_ = 200
+tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub('-100',''), offset_ = 0,limit_ = 200
 },function(ta,taha)
 local t = "\n| قائمة الاعضاء \n◄⠀━━━━𖦹━━━━⠀►\n"
 x = 0
